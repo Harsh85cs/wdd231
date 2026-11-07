@@ -21,11 +21,11 @@
   nav a {
     text-align: center;
     border-left: none;
-    border-bottom: 4px solid transparent; /* same width always: no twitch */
+    border-bottom: 4px solid var(--clear); /* same width always: no twitch */
   }
 
   nav a.active {
-    border-bottom-color: #fff;
+    border-bottom-color: var(--white);
   }
 
   /* Two-column layout: course work + place side by side, certificate full width */

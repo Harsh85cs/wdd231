@@ -8,6 +8,9 @@
   --text: #1e293b;
   --muted: #475569;
   --pending: #e2e8f0;
+  --white: #ffffff;
+  --shadow: #0000001a;    /* black at 10% */
+  --clear: #00000000;     /* fully transparent */
   --radius: 10px;
   --font: "Outfit", Arial, Helvetica, sans-serif;
 }
@@ -39,7 +42,7 @@ header {
   justify-content: space-between;
   padding: 0.75rem 1rem;
   background-color: var(--primary);
-  color: #fff;
+  color: var(--white);
 }
 
 .brand {
@@ -58,10 +61,10 @@ header {
   font-size: 1.75rem;
   width: 44px;
   height: 44px;
-  background: none;
-  border: 2px solid transparent;
+  background-color: var(--clear);
+  border: 2px solid var(--clear);
   border-radius: 6px;
-  color: #fff;
+  color: var(--white);
   cursor: pointer;
 }
 
@@ -96,9 +99,9 @@ nav ul.open {
 nav a {
   display: block;
   padding: 0.75rem 1rem;
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
-  border-left: 4px solid transparent; /* fixed width: no twitch on hover */
+  border-left: 4px solid var(--clear); /* fixed width: no twitch on hover */
 }
 
 nav a:hover,
@@ -108,7 +111,7 @@ nav a:focus-visible {
 
 /* Wayfinding: current page */
 nav a.active {
-  border-left-color: #fff;
+  border-left-color: var(--white);
   font-weight: 700;
 }
 
@@ -129,7 +132,7 @@ h1 {
 .card {
   background-color: var(--surface);
   border-radius: var(--radius);
-  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+  box-shadow: 0 2px 6px var(--shadow);
   overflow: hidden;
 }
 
@@ -137,7 +140,7 @@ h1 {
   margin: 0;
   padding: 0.75rem 1rem;
   background-color: var(--primary);
-  color: #fff;
+  color: var(--white);
   font-size: 1.15rem;
   text-align: center;
 }
@@ -197,7 +200,7 @@ h1 {
 
 .filters button.selected {
   background-color: var(--primary);
-  color: #fff;
+  color: var(--white);
 }
 
 #courses {
@@ -221,7 +224,7 @@ h1 {
 .course.completed {
   background-color: var(--accent);
   border-color: var(--accent);
-  color: #fff;
+  color: var(--white);
 }
 
 .course.completed::before {
@@ -238,7 +241,7 @@ h1 {
 /* ---------- Footer ---------- */
 footer {
   background-color: var(--primary);
-  color: #fff;
+  color: var(--white);
   padding: 1.25rem 1rem;
   text-align: center;
 }
