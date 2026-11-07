@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abraham López | WDD 231 - Web Frontend Development I</title>
+  <meta name="description" content="WDD 231 course home page for Abraham López: course work, Web and Computer Programming certificate progress, and links to the Chamber and Final projects.">
+  <meta name="author" content="Abraham López">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles: small first, then larger (contains the media query) -->
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <!-- Scripts -->
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/course.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="images/logo.svg" alt="Abraham López logo" width="48" height="48">
+      <span>Abraham López</span>
+    </div>
+    <button id="menu" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links"></button>
+  </header>
+
+  <nav>
+    <ul id="nav-links">
+      <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+      <li><a href="chamber/index.html">Chamber</a></li>
+      <li><a href="final/index.html">Final</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Home</h1>
+
+    <section class="card coursework">
+      <h2>Course Work</h2>
+      <ul>
+        <li>WDD 231 – Web Frontend Development I</li>
+        <li>Responsive layouts with CSS Grid and Flexbox</li>
+        <li>JavaScript arrays, objects, and DOM manipulation</li>
+        <li>Chamber of Commerce site project</li>
+        <li>Final project</li>
+      </ul>
+    </section>
+
+    <section class="card place">
+      <h2>Monterrey, Nuevo León</h2>
+      <figure>
+        <img src="images/monterrey.svg" alt="Illustration of mountains over the Monterrey skyline" width="640" height="360" loading="lazy">
+        <figcaption>Monterrey, Nuevo León, México</figcaption>
+      </figure>
+    </section>
+
+    <section class="card certificate">
+      <h2>Web and Computer Programming Certificate</h2>
+      <div class="filters" role="group" aria-label="Filter courses">
+        <button type="button" data-filter="all" class="selected">All</button>
+        <button type="button" data-filter="CSE">CSE</button>
+        <button type="button" data-filter="WDD">WDD</button>
+      </div>
+      <div id="courses" aria-live="polite"></div>
+      <p id="credits"></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social">
+      <a href="https://github.com/YOUR-GITHUB-USERNAME" aria-label="GitHub profile">
+        <img src="images/github.svg" alt="GitHub icon" width="32" height="32">
+      </a>
+      <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-ID" aria-label="LinkedIn profile">
+        <img src="images/linkedin.svg" alt="LinkedIn icon" width="32" height="32">
+      </a>
+      <a href="mailto:abrahamolopezp@gmail.com" aria-label="Send email">
+        <img src="images/email.svg" alt="Email icon" width="32" height="32">
+      </a>
+    </div>
+    <p>&copy; <span id="currentyear"></span> 🌄 Abraham López 🌄 Nuevo León, México</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

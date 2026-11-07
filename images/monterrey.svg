@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img" aria-label="Mountains over a city skyline">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fb923c"/>
+      <stop offset="0.55" stop-color="#fcd34d"/>
+      <stop offset="1" stop-color="#fef3c7"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#sky)"/>
+  <circle cx="470" cy="120" r="34" fill="#fff7ed" opacity="0.9"/>
+  <path d="M0 260 L70 170 L120 210 L190 120 L250 200 L300 150 L340 190 L380 110 L405 140 L430 95 L470 160 L540 130 L640 220 V360 H0 Z" fill="#475569"/>
+  <path d="M0 290 L90 230 L170 260 L260 210 L360 255 L450 220 L560 250 L640 235 V360 H0 Z" fill="#334155"/>
+  <g fill="#1d2a3a">
+    <rect x="40" y="280" width="40" height="80"/>
+    <rect x="90" y="255" width="30" height="105"/>
+    <rect x="130" y="290" width="50" height="70"/>
+    <rect x="200" y="240" width="28" height="120"/>
+    <rect x="236" y="270" width="44" height="90"/>
+    <rect x="300" y="225" width="22" height="135"/>
+    <rect x="330" y="285" width="60" height="75"/>
+    <rect x="410" y="260" width="36" height="100"/>
+    <rect x="456" y="290" width="48" height="70"/>
+    <rect x="520" y="250" width="30" height="110"/>
+    <rect x="560" y="280" width="56" height="80"/>
+  </g>
+  <rect y="340" width="640" height="20" fill="#0f766e"/>
+</svg>

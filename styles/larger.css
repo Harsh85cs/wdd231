@@ -1,0 +1,68 @@
+/* ===== larger.css — wider screens ===== */
+@media (min-width: 640px) {
+  /* Hide hamburger, show horizontal flex navigation */
+  #menu {
+    display: none;
+  }
+
+  nav ul,
+  nav ul.open {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  nav li {
+    flex: 1 1 0;
+    max-width: 200px;
+  }
+
+  nav a {
+    text-align: center;
+    border-left: none;
+    border-bottom: 4px solid transparent; /* same width always: no twitch */
+  }
+
+  nav a.active {
+    border-bottom-color: #fff;
+  }
+
+  /* Two-column layout: course work + place side by side, certificate full width */
+  main {
+    grid-template-columns: 1fr 1fr;
+    padding: 1.5rem;
+  }
+
+  h1,
+  .certificate {
+    grid-column: 1 / -1;
+  }
+
+  #courses {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+    padding: 1.25rem 2rem;
+  }
+
+  .social {
+    margin-bottom: 0;
+  }
+
+  footer p:last-child {
+    text-align: right;
+  }
+}
+
+@media (min-width: 1000px) {
+  main {
+    grid-template-columns: 1fr 1.4fr;
+  }
+}
