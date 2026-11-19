@@ -36,15 +36,10 @@ input,
 select,
 textarea {
   font: inherit;
-  color: inherit;
 }
 
 button {
   cursor: pointer;
-}
-
-a {
-  color: inherit;
 }
 
 [hidden] {

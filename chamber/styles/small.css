@@ -1,15 +1,32 @@
 /* ===== San Nicolás Chamber of Commerce — base / mobile styles ===== */
 :root {
-  --primary: #0b3c5d;      /* deep blue */
-  --secondary: #a8432f;    /* terracotta */
-  --accent: #f2b134;       /* gold */
-  --background: #f7f5f0;   /* warm off-white */
+  /* Palette — every color is a hex value stored in a variable */
+  --primary: #0b3c5d;        /* deep blue */
+  --primary-dark: #082a40;   /* nav background */
+  --secondary: #a8432f;      /* terracotta */
+  --accent: #f2b134;         /* gold */
+  --accent-light: #ffc857;   /* CTA hover */
+  --background: #f7f5f0;     /* warm off-white */
   --surface: #ffffff;
+  --white: #ffffff;
   --text: #1f2328;
   --muted: #4b5563;
   --border: #d9d4c7;
+  --soft-blue: #e6eef4;
+  --soft-text: #e8edf2;
+  --silver: #d4d8dd;
+  --sand: #e8e2d5;
+  --stripe: #ece7dc;
+  --overlay: #082a40d9;      /* primary-dark at 85% */
+  --white-10: #ffffff1a;
+  --white-15: #ffffff26;
+  --white-50: #ffffff80;
+  --white-60: #ffffff99;
+  --clear: #ffffff00;
+  --shadow-color: #00000014;
+  --shadow-strong: #00000040;
   --radius: 10px;
-  --shadow: 0 2px 8px rgb(0 0 0 / 0.08);
+  --shadow: 0 2px 8px var(--shadow-color);
   --font: "Poppins", "Segoe UI", Arial, sans-serif;
 }
 
@@ -47,7 +64,7 @@ h1, h2, h3 {
 /* ---------- Header ---------- */
 header {
   background: var(--primary);
-  color: #fff;
+  color: var(--white);
 }
 
 .header-bar {
@@ -64,7 +81,7 @@ header {
   align-items: center;
   gap: 0.75rem;
   text-decoration: none;
-  color: #fff;
+  color: var(--white);
   flex: 1;
 }
 
@@ -83,14 +100,14 @@ header {
   display: block;
   font-size: 0.8rem;
   font-weight: 400;
-  color: #e8edf2;
+  color: var(--soft-text);
 }
 
 #menu {
   background: none;
-  border: 2px solid rgb(255 255 255 / 0.6);
+  border: 2px solid var(--white-60);
   border-radius: 6px;
-  color: #fff;
+  color: var(--white);
   font-size: 1.5rem;
   width: 44px;
   height: 44px;
@@ -108,7 +125,7 @@ header {
 /* ---------- Navigation ---------- */
 #primary-nav {
   display: none;
-  background: #082a40;
+  background: var(--primary-dark);
 }
 
 #primary-nav.open {
@@ -123,14 +140,14 @@ header {
 #primary-nav a {
   display: block;
   padding: 0.85rem 1rem;
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
-  border-top: 1px solid rgb(255 255 255 / 0.1);
+  border-top: 1px solid var(--white-10);
 }
 
 #primary-nav a:hover,
 #primary-nav a:focus-visible {
-  background: rgb(255 255 255 / 0.12);
+  background: var(--white-15);
 }
 
 #primary-nav a.active {
@@ -149,7 +166,7 @@ header {
 
 .card > h2 {
   background: var(--primary);
-  color: #fff;
+  color: var(--white);
   font-size: 1.1rem;
   padding: 0.6rem 1rem;
 }
@@ -173,7 +190,7 @@ header {
 
 .hero-content {
   background: var(--primary);
-  color: #fff;
+  color: var(--white);
   padding: 1rem;
 }
 
@@ -190,13 +207,13 @@ header {
   text-decoration: none;
   padding: 0.7rem 1.4rem;
   border-radius: 999px;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.25);
+  box-shadow: 0 3px 10px var(--shadow-strong);
   transition: transform 0.15s ease, background 0.15s ease;
 }
 
 .cta:hover,
 .cta:focus-visible {
-  background: #ffc857;
+  background: var(--accent-light);
   transform: translateY(-2px);
 }
 
@@ -238,7 +255,7 @@ header {
 .weather-now img {
   width: 80px;
   height: 80px;
-  background: #e6eef4;
+  background: var(--soft-blue);
   border-radius: 50%;
 }
 
@@ -287,7 +304,7 @@ header {
 
 .spotlight h3 {
   background: var(--primary);
-  color: #fff;
+  color: var(--white);
   font-size: 1.05rem;
   padding: 0.6rem 1rem;
 }
@@ -334,12 +351,12 @@ header {
 }
 
 .level-2 {
-  background: #d4d8dd;
+  background: var(--silver);
   color: var(--text);
 }
 
 .level-1 {
-  background: #e8e2d5;
+  background: var(--sand);
   color: var(--text);
 }
 
@@ -375,7 +392,7 @@ header {
 
 .view-toggle button[aria-pressed="true"] {
   background: var(--primary);
-  color: #fff;
+  color: var(--white);
 }
 
 /* Grid view */
@@ -423,7 +440,7 @@ header {
 }
 
 .members.list .member:nth-child(even) {
-  background: #ece7dc;
+  background: var(--stripe);
 }
 
 .members.list .member img,
@@ -439,7 +456,7 @@ header {
 /* ---------- Footer ---------- */
 footer {
   background: var(--primary);
-  color: #fff;
+  color: var(--white);
   font-size: 0.9rem;
 }
 
@@ -470,14 +487,22 @@ footer address {
 .social a {
   display: inline-block;
   padding: 0.4rem 0.9rem;
-  border: 1px solid rgb(255 255 255 / 0.5);
+  border: 1px solid var(--white-50);
   border-radius: 999px;
   text-decoration: none;
 }
 
 .social a:hover,
 .social a:focus-visible {
-  background: rgb(255 255 255 / 0.15);
+  background: var(--white-15);
+}
+
+main a {
+  color: var(--primary);
+}
+
+footer a {
+  color: var(--white);
 }
 
 a:focus-visible,
