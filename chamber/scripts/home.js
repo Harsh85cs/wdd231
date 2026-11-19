@@ -2,7 +2,7 @@
 
 /* ---------- Weather ---------- */
 // Get a free key at https://home.openweathermap.org/api_keys and paste it here.
-const API_KEY = "YOUR_OPENWEATHER_API_KEY";
+const API_KEY = "84ce62c62d13ce9645c829fe82877d66";
 const LAT = 25.7443;   // San Nicolás de los Garza, N.L.
 const LON = -100.3021;
 const WEATHER_BASE = "https://api.openweathermap.org/data/2.5";
