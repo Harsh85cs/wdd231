@@ -1,68 +1,47 @@
 /* ===== San Nicolás Chamber of Commerce — base / mobile styles ===== */
 :root {
-  /* Palette — every color is a hex value stored in a variable */
-  --primary: #0b3c5d;        /* deep blue */
-  --primary-dark: #082a40;   /* nav background */
-  --secondary: #a8432f;      /* terracotta */
-  --accent: #f2b134;         /* gold */
-  --accent-light: #ffc857;   /* CTA hover */
-  --background: #f7f5f0;     /* warm off-white */
-  --surface: #ffffff;
+  /* Palette: every color is a hex value stored in a variable */
+  --primary: #0b3c5d;
+  --primary-dark: #082a40;
+  --secondary: #a8432f;
+  --accent: #f2b134;
+  --background: #f7f5f0;
   --white: #ffffff;
   --text: #1f2328;
   --muted: #4b5563;
   --border: #d9d4c7;
-  --soft-blue: #e6eef4;
-  --soft-text: #e8edf2;
+  --light: #ece7dc;
   --silver: #d4d8dd;
-  --sand: #e8e2d5;
-  --stripe: #ece7dc;
-  --overlay: #082a40d9;      /* primary-dark at 85% */
-  --white-10: #ffffff1a;
+  --overlay: #082a40d9;
   --white-15: #ffffff26;
-  --white-50: #ffffff80;
   --white-60: #ffffff99;
   --clear: #ffffff00;
-  --shadow-color: #00000014;
-  --shadow-strong: #00000040;
+  --shadow: 0 2px 8px #00000026;
   --radius: 10px;
-  --shadow: 0 2px 8px var(--shadow-color);
-  --font: "Poppins", "Segoe UI", Arial, sans-serif;
 }
 
 body {
-  font-family: var(--font);
+  font-family: "Poppins", Arial, sans-serif;
   background: var(--background);
   color: var(--text);
   line-height: 1.5;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
 main {
-  flex: 1;
-  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
 }
 
-h1, h2, h3 {
-  line-height: 1.2;
+main a {
+  color: var(--primary);
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  white-space: nowrap;
-}
-
-/* ---------- Header ---------- */
-header {
+/* ---------- Header & navigation ---------- */
+header,
+footer,
+.card > h2,
+.spotlight h3 {
   background: var(--primary);
   color: var(--white);
 }
@@ -73,45 +52,32 @@ header {
   padding: 0.75rem 1rem;
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  justify-content: space-between;
 }
 
 .brand {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  text-decoration: none;
   color: var(--white);
-  flex: 1;
-}
-
-.brand img {
-  width: 48px;
-  height: 48px;
-}
-
-.brand-name {
-  font-size: 1.05rem;
+  text-decoration: none;
   font-weight: 700;
   line-height: 1.15;
 }
 
-.brand-name span {
+.brand small {
   display: block;
-  font-size: 0.8rem;
   font-weight: 400;
-  color: var(--soft-text);
 }
 
 #menu {
-  background: none;
+  background: var(--clear);
   border: 2px solid var(--white-60);
   border-radius: 6px;
   color: var(--white);
   font-size: 1.5rem;
   width: 44px;
   height: 44px;
-  line-height: 1;
 }
 
 #menu::before {
@@ -122,7 +88,6 @@ header {
   content: "✕";
 }
 
-/* ---------- Navigation ---------- */
 #primary-nav {
   display: none;
   background: var(--primary-dark);
@@ -132,41 +97,35 @@ header {
   display: block;
 }
 
-#primary-nav ul {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 #primary-nav a {
   display: block;
   padding: 0.85rem 1rem;
   color: var(--white);
   text-decoration: none;
-  border-top: 1px solid var(--white-10);
 }
 
 #primary-nav a:hover,
-#primary-nav a:focus-visible {
+.social a:hover {
   background: var(--white-15);
 }
 
 #primary-nav a.active {
-  border-left: 4px solid var(--accent);
-  font-weight: 600;
+  font-weight: 700;
+  box-shadow: inset 4px 0 var(--accent);
 }
 
-/* ---------- Shared card ---------- */
-.card {
-  background: var(--surface);
+/* ---------- Cards (shared) ---------- */
+.card,
+.members.grid .member {
+  background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   overflow: hidden;
 }
 
-.card > h2 {
-  background: var(--primary);
-  color: var(--white);
+.card > h2,
+.spotlight h3 {
   font-size: 1.1rem;
   padding: 0.6rem 1rem;
 }
@@ -175,17 +134,21 @@ header {
   padding: 1rem;
 }
 
+.status,
+.tagline,
+.industry {
+  color: var(--muted);
+}
+
 /* ---------- Home: hero ---------- */
 .hero {
   position: relative;
   border-radius: var(--radius);
   overflow: hidden;
-  margin-bottom: 1rem;
 }
 
 .hero img {
   width: 100%;
-  height: auto;
 }
 
 .hero-content {
@@ -194,47 +157,27 @@ header {
   padding: 1rem;
 }
 
-.hero-content h1 {
-  font-size: 1.35rem;
-  margin-bottom: 0.75rem;
-}
-
 .cta {
   display: inline-block;
+  margin-top: 0.75rem;
   background: var(--accent);
   color: var(--text);
   font-weight: 700;
   text-decoration: none;
   padding: 0.7rem 1.4rem;
   border-radius: 999px;
-  box-shadow: 0 3px 10px var(--shadow-strong);
-  transition: transform 0.15s ease, background 0.15s ease;
 }
 
-.cta:hover,
-.cta:focus-visible {
-  background: var(--accent-light);
+.cta:hover {
   transform: translateY(-2px);
 }
 
-/* ---------- Home: info grid ---------- */
+/* ---------- Home: grids ---------- */
 .home-grid,
-.spotlights {
+.spotlight-container {
   display: grid;
   gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.event {
-  padding-bottom: 0.75rem;
-  margin-bottom: 0.75rem;
-  border-bottom: 1px dashed var(--border);
-}
-
-.event:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
+  margin: 1rem 0;
 }
 
 .event h3 {
@@ -242,21 +185,17 @@ header {
   color: var(--secondary);
 }
 
-.event p {
-  font-size: 0.9rem;
+.event + .event {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--border);
 }
 
-.weather-now {
+.weather-now,
+.spotlight-body {
   display: flex;
   align-items: center;
   gap: 1rem;
-}
-
-.weather-now img {
-  width: 80px;
-  height: 80px;
-  background: var(--soft-blue);
-  border-radius: 50%;
 }
 
 .temp {
@@ -265,72 +204,33 @@ header {
   color: var(--primary);
 }
 
-.weather-details {
-  margin-top: 0.75rem;
-  font-size: 0.9rem;
-}
-
-.weather-details p span,
-.forecast-list strong {
-  font-weight: 600;
-}
-
 .forecast-list li {
   display: flex;
   justify-content: space-between;
   padding: 0.5rem 0;
-  border-bottom: 1px solid var(--border);
 }
 
-.forecast-list li:last-child {
-  border-bottom: none;
-}
-
-.status {
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
-/* ---------- Spotlights ---------- */
-.spotlights > h2 {
-  font-size: 1.3rem;
+.spotlights > h2,
+.directory-header h1 {
   color: var(--primary);
 }
 
-.spotlight-container {
-  display: grid;
-  gap: 1rem;
-}
-
-.spotlight h3 {
-  background: var(--primary);
-  color: var(--white);
-  font-size: 1.05rem;
-  padding: 0.6rem 1rem;
-}
-
-.spotlight .tagline {
-  font-style: italic;
-  color: var(--muted);
-  padding: 0.5rem 1rem 0;
-}
-
 .spotlight-body {
-  display: flex;
-  gap: 1rem;
   padding: 1rem;
-  align-items: flex-start;
 }
 
 .spotlight-body img {
-  width: 80px;
-  height: 80px;
   flex-shrink: 0;
 }
 
-.spotlight-body p {
-  font-size: 0.88rem;
-  margin-bottom: 0.25rem;
+.tagline {
+  font-style: italic;
+  padding: 0.5rem 1rem 0;
+}
+
+.spotlight-body p,
+.member p {
+  font-size: 0.9rem;
   overflow-wrap: anywhere;
 }
 
@@ -339,25 +239,17 @@ header {
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
   padding: 0.15rem 0.6rem;
   border-radius: 999px;
-  margin-top: 0.35rem;
+  background: var(--light);
 }
 
 .level-3 {
   background: var(--accent);
-  color: var(--text);
 }
 
 .level-2 {
   background: var(--silver);
-  color: var(--text);
-}
-
-.level-1 {
-  background: var(--sand);
-  color: var(--text);
 }
 
 /* ---------- Directory ---------- */
@@ -367,27 +259,15 @@ header {
   justify-content: space-between;
   align-items: center;
   gap: 0.75rem;
-  margin-bottom: 1rem;
-}
-
-.directory-header h1 {
-  font-size: 1.5rem;
-  color: var(--primary);
-}
-
-.view-toggle {
-  display: flex;
-  gap: 0.5rem;
 }
 
 .view-toggle button {
-  background: var(--surface);
+  background: var(--white);
   border: 2px solid var(--primary);
   color: var(--primary);
   border-radius: 6px;
   padding: 0.45rem 1rem;
-  font-weight: 600;
-  min-height: 44px;
+  font-weight: 700;
 }
 
 .view-toggle button[aria-pressed="true"] {
@@ -395,71 +275,45 @@ header {
   color: var(--white);
 }
 
-/* Grid view */
 .members.grid {
   display: grid;
   gap: 1rem;
+  margin-top: 1rem;
 }
 
 .members.grid .member {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
   padding: 1rem;
   text-align: center;
 }
 
-.members.grid .member img {
-  width: 100px;
-  height: 100px;
+.members.grid img {
   margin: 0 auto 0.75rem;
 }
 
-.members.grid .member h2 {
-  font-size: 1.1rem;
+.member h2 {
+  font-size: 1.05rem;
   color: var(--primary);
 }
 
-.member p {
-  font-size: 0.9rem;
-  overflow-wrap: anywhere;
+.members.list {
+  margin-top: 1rem;
 }
 
-.member .industry {
-  color: var(--muted);
-  font-style: italic;
-}
-
-/* List view */
 .members.list .member {
-  display: grid;
-  gap: 0.15rem;
+  background: var(--white);
   padding: 0.75rem 1rem;
-  background: var(--surface);
 }
 
 .members.list .member:nth-child(even) {
-  background: var(--stripe);
+  background: var(--light);
 }
 
-.members.list .member img,
-.members.list .member .industry {
+.members.list img,
+.members.list .industry {
   display: none;
 }
 
-.members.list .member h2 {
-  font-size: 1rem;
-  color: var(--primary);
-}
-
 /* ---------- Footer ---------- */
-footer {
-  background: var(--primary);
-  color: var(--white);
-  font-size: 0.9rem;
-}
-
 .footer-grid {
   max-width: 1200px;
   margin: 0 auto;
@@ -470,8 +324,11 @@ footer {
 
 footer h2 {
   font-size: 1rem;
-  margin-bottom: 0.4rem;
   color: var(--accent);
+}
+
+footer a {
+  color: var(--white);
 }
 
 footer address {
@@ -480,33 +337,17 @@ footer address {
 
 .social {
   display: flex;
-  flex-wrap: wrap;
   gap: 0.5rem;
 }
 
 .social a {
-  display: inline-block;
   padding: 0.4rem 0.9rem;
-  border: 1px solid var(--white-50);
+  border: 1px solid var(--white-60);
   border-radius: 999px;
   text-decoration: none;
 }
 
-.social a:hover,
-.social a:focus-visible {
-  background: var(--white-15);
-}
-
-main a {
-  color: var(--primary);
-}
-
-footer a {
-  color: var(--white);
-}
-
-a:focus-visible,
-button:focus-visible {
+:focus-visible {
   outline: 3px solid var(--accent);
   outline-offset: 2px;
 }
