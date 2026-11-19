@@ -1,0 +1,487 @@
+/* ===== San Nicolás Chamber of Commerce — base / mobile styles ===== */
+:root {
+  --primary: #0b3c5d;      /* deep blue */
+  --secondary: #a8432f;    /* terracotta */
+  --accent: #f2b134;       /* gold */
+  --background: #f7f5f0;   /* warm off-white */
+  --surface: #ffffff;
+  --text: #1f2328;
+  --muted: #4b5563;
+  --border: #d9d4c7;
+  --radius: 10px;
+  --shadow: 0 2px 8px rgb(0 0 0 / 0.08);
+  --font: "Poppins", "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ---------- Header ---------- */
+header {
+  background: var(--primary);
+  color: #fff;
+}
+
+.header-bar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: #fff;
+  flex: 1;
+}
+
+.brand img {
+  width: 48px;
+  height: 48px;
+}
+
+.brand-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.brand-name span {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #e8edf2;
+}
+
+#menu {
+  background: none;
+  border: 2px solid rgb(255 255 255 / 0.6);
+  border-radius: 6px;
+  color: #fff;
+  font-size: 1.5rem;
+  width: 44px;
+  height: 44px;
+  line-height: 1;
+}
+
+#menu::before {
+  content: "☰";
+}
+
+#menu.open::before {
+  content: "✕";
+}
+
+/* ---------- Navigation ---------- */
+#primary-nav {
+  display: none;
+  background: #082a40;
+}
+
+#primary-nav.open {
+  display: block;
+}
+
+#primary-nav ul {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#primary-nav a {
+  display: block;
+  padding: 0.85rem 1rem;
+  color: #fff;
+  text-decoration: none;
+  border-top: 1px solid rgb(255 255 255 / 0.1);
+}
+
+#primary-nav a:hover,
+#primary-nav a:focus-visible {
+  background: rgb(255 255 255 / 0.12);
+}
+
+#primary-nav a.active {
+  border-left: 4px solid var(--accent);
+  font-weight: 600;
+}
+
+/* ---------- Shared card ---------- */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.card > h2 {
+  background: var(--primary);
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 0.6rem 1rem;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+/* ---------- Home: hero ---------- */
+.hero {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+.hero-content {
+  background: var(--primary);
+  color: #fff;
+  padding: 1rem;
+}
+
+.hero-content h1 {
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.cta {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.25);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.cta:hover,
+.cta:focus-visible {
+  background: #ffc857;
+  transform: translateY(-2px);
+}
+
+/* ---------- Home: info grid ---------- */
+.home-grid,
+.spotlights {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.event {
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px dashed var(--border);
+}
+
+.event:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.event h3 {
+  font-size: 1rem;
+  color: var(--secondary);
+}
+
+.event p {
+  font-size: 0.9rem;
+}
+
+.weather-now {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.weather-now img {
+  width: 80px;
+  height: 80px;
+  background: #e6eef4;
+  border-radius: 50%;
+}
+
+.temp {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.weather-details {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.weather-details p span,
+.forecast-list strong {
+  font-weight: 600;
+}
+
+.forecast-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.forecast-list li:last-child {
+  border-bottom: none;
+}
+
+.status {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* ---------- Spotlights ---------- */
+.spotlights > h2 {
+  font-size: 1.3rem;
+  color: var(--primary);
+}
+
+.spotlight-container {
+  display: grid;
+  gap: 1rem;
+}
+
+.spotlight h3 {
+  background: var(--primary);
+  color: #fff;
+  font-size: 1.05rem;
+  padding: 0.6rem 1rem;
+}
+
+.spotlight .tagline {
+  font-style: italic;
+  color: var(--muted);
+  padding: 0.5rem 1rem 0;
+}
+
+.spotlight-body {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  align-items: flex-start;
+}
+
+.spotlight-body img {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.spotlight-body p {
+  font-size: 0.88rem;
+  margin-bottom: 0.25rem;
+  overflow-wrap: anywhere;
+}
+
+.level {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  margin-top: 0.35rem;
+}
+
+.level-3 {
+  background: var(--accent);
+  color: var(--text);
+}
+
+.level-2 {
+  background: #d4d8dd;
+  color: var(--text);
+}
+
+.level-1 {
+  background: #e8e2d5;
+  color: var(--text);
+}
+
+/* ---------- Directory ---------- */
+.directory-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.directory-header h1 {
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.view-toggle {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.view-toggle button {
+  background: var(--surface);
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  border-radius: 6px;
+  padding: 0.45rem 1rem;
+  font-weight: 600;
+  min-height: 44px;
+}
+
+.view-toggle button[aria-pressed="true"] {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* Grid view */
+.members.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.members.grid .member {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1rem;
+  text-align: center;
+}
+
+.members.grid .member img {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 0.75rem;
+}
+
+.members.grid .member h2 {
+  font-size: 1.1rem;
+  color: var(--primary);
+}
+
+.member p {
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+}
+
+.member .industry {
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* List view */
+.members.list .member {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.75rem 1rem;
+  background: var(--surface);
+}
+
+.members.list .member:nth-child(even) {
+  background: #ece7dc;
+}
+
+.members.list .member img,
+.members.list .member .industry {
+  display: none;
+}
+
+.members.list .member h2 {
+  font-size: 1rem;
+  color: var(--primary);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.footer-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  display: grid;
+  gap: 1.25rem;
+}
+
+footer h2 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+  color: var(--accent);
+}
+
+footer address {
+  font-style: normal;
+}
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.social a {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid rgb(255 255 255 / 0.5);
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.social a:hover,
+.social a:focus-visible {
+  background: rgb(255 255 255 / 0.15);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}

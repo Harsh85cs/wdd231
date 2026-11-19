@@ -1,0 +1,113 @@
+/* ===== Larger views ===== */
+
+/* Tablet and up */
+@media (min-width: 40em) {
+  .members.grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .members.list .member {
+    grid-template-columns: 1.3fr 2fr 1fr 1.2fr;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .members.list .member p {
+    margin: 0;
+  }
+
+  .spotlight-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Hero call to action sits over the image */
+  .hero-content {
+    position: absolute;
+    left: 1.5rem;
+    bottom: 1.5rem;
+    max-width: 26rem;
+    background: rgb(8 42 64 / 0.85);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+  }
+
+  .footer-dev {
+    text-align: right;
+  }
+
+  .footer-social {
+    text-align: center;
+  }
+
+  .social {
+    justify-content: center;
+  }
+}
+
+/* Desktop */
+@media (min-width: 64em) {
+  #menu {
+    display: none;
+  }
+
+  #primary-nav,
+  #primary-nav.open {
+    display: block;
+  }
+
+  #primary-nav ul {
+    display: flex;
+    padding: 0 1rem;
+  }
+
+  #primary-nav a {
+    border-top: none;
+    border-bottom: 4px solid transparent;
+    padding: 0.85rem 1.25rem;
+  }
+
+  #primary-nav a.active {
+    border-left: none;
+    border-bottom-color: var(--accent);
+  }
+
+  .brand img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .brand-name {
+    font-size: 1.35rem;
+  }
+
+  main {
+    padding: 1.5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  /* Events | Current weather | Forecast */
+  .home-grid {
+    grid-template-columns: 1.4fr 1fr 1fr;
+    align-items: start;
+  }
+
+  .spotlight-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .members.grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

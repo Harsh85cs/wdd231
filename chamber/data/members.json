@@ -1,0 +1,90 @@
+[
+  {
+    "name": "Norte Logística Integral",
+    "address": "Av. Diego Díaz de Berlanga 410, Col. Jardines de San Nicolás, San Nicolás de los Garza, N.L.",
+    "phone": "+52 81 8350 1200",
+    "website": "https://example.com/norte-logistica",
+    "image": "norte-logistica.svg",
+    "membershipLevel": 3,
+    "industry": "Freight & Logistics",
+    "founded": 2009,
+    "tagline": "Moving northern Mexico's industry, on time."
+  },
+  {
+    "name": "Cerro Tech Solutions",
+    "address": "Av. Universidad 1820, Col. Anáhuac, San Nicolás de los Garza, N.L.",
+    "phone": "+52 81 8376 4410",
+    "website": "https://example.com/cerro-tech",
+    "image": "cerro-tech.svg",
+    "membershipLevel": 3,
+    "industry": "Software & IT Services",
+    "founded": 2016,
+    "tagline": "Enterprise software and AI built in Nuevo León."
+  },
+  {
+    "name": "Panadería La Nogalera",
+    "address": "Calle Juárez 215, Centro, San Nicolás de los Garza, N.L.",
+    "phone": "+52 81 8352 0937",
+    "website": "https://example.com/la-nogalera",
+    "image": "la-nogalera.svg",
+    "membershipLevel": 1,
+    "industry": "Bakery",
+    "founded": 1987,
+    "tagline": "Pan dulce baked fresh every morning."
+  },
+  {
+    "name": "Aceros del Valle Industrial",
+    "address": "Av. Manuel L. Barragán 3500, Col. Hidalgo, San Nicolás de los Garza, N.L.",
+    "phone": "+52 81 8331 7720",
+    "website": "https://example.com/aceros-del-valle",
+    "image": "aceros-del-valle.svg",
+    "membershipLevel": 2,
+    "industry": "Steel Distribution",
+    "founded": 1998,
+    "tagline": "Steel products cut to your specifications."
+  },
+  {
+    "name": "Clínica Dental Sonrisa Regia",
+    "address": "Av. Santo Domingo 902, Col. Valle de Santo Domingo, San Nicolás de los Garza, N.L.",
+    "phone": "+52 81 8305 6611",
+    "website": "https://example.com/sonrisa-regia",
+    "image": "sonrisa-regia.svg",
+    "membershipLevel": 2,
+    "industry": "Health & Dental Care",
+    "founded": 2012,
+    "tagline": "Family dentistry with a regio smile."
+  },
+  {
+    "name": "Café Universidad",
+    "address": "Av. Pedro de Alba 120, Ciudad Universitaria, San Nicolás de los Garza, N.L.",
+    "phone": "+52 81 8329 0450",
+    "website": "https://example.com/cafe-universidad",
+    "image": "cafe-universidad.svg",
+    "membershipLevel": 1,
+    "industry": "Café & Coworking",
+    "founded": 2019,
+    "tagline": "Local coffee, fast Wi-Fi, room to work."
+  },
+  {
+    "name": "Constructora Anáhuac",
+    "address": "Av. Sendero Divisorio 1250, Col. Residencial Anáhuac, San Nicolás de los Garza, N.L.",
+    "phone": "+52 81 8158 3300",
+    "website": "https://example.com/constructora-anahuac",
+    "image": "constructora-anahuac.svg",
+    "membershipLevel": 3,
+    "industry": "Construction",
+    "founded": 2001,
+    "tagline": "Industrial and commercial construction since 2001."
+  },
+  {
+    "name": "Imprenta Garza Digital",
+    "address": "Av. Rómulo Garza 760, Col. Las Puentes, San Nicolás de los Garza, N.L.",
+    "phone": "+52 81 8302 1845",
+    "website": "https://example.com/garza-digital",
+    "image": "garza-digital.svg",
+    "membershipLevel": 2,
+    "industry": "Printing & Signage",
+    "founded": 2005,
+    "tagline": "Business cards to billboards, printed locally."
+  }
+]

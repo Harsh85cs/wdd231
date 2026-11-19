@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>San Nicolás Chamber of Commerce | Home</title>
+  <meta name="description"
+    content="The San Nicolás de los Garza Chamber of Commerce connects local businesses with events, networking, member spotlights and resources to grow in Nuevo León.">
+  <meta name="author" content="Abraham">
+
+  <!-- Open Graph (Facebook) -->
+  <meta property="og:title" content="San Nicolás Chamber of Commerce">
+  <meta property="og:description"
+    content="Events, networking and member spotlights for businesses in San Nicolás de los Garza, Nuevo León.">
+  <meta property="og:image" content="https://USERNAME.github.io/wdd231/chamber/images/og-image.png">
+  <meta property="og:url" content="https://USERNAME.github.io/wdd231/chamber/index.html">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+</head>
+
+<body>
+  <header>
+    <div class="header-bar">
+      <a class="brand" href="index.html">
+        <img src="images/logo.svg" alt="San Nicolás Chamber of Commerce logo" width="64" height="64">
+        <span class="brand-name">San Nicolás <span>Chamber of Commerce</span></span>
+      </a>
+      <button id="menu" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"></button>
+    </div>
+    <nav id="primary-nav" aria-label="Main">
+      <ul class="nav-list">
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html">Discover</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="images/hero.svg"
+        alt="Illustrated skyline of San Nicolás de los Garza at sunrise with the Topo Chico hill behind the city"
+        width="1600" height="700" fetchpriority="high">
+      <div class="hero-content">
+        <h1>Grow your business in San Nicolás</h1>
+        <a class="cta" href="join.html">Join the Chamber</a>
+      </div>
+    </section>
+
+    <div class="home-grid">
+      <section class="card events">
+        <h2>Current Events</h2>
+        <div class="card-body">
+          <article class="event">
+            <h3>Business Networking Breakfast</h3>
+            <p><strong>Thu, Dec 3, 2026 · 8:00 AM</strong></p>
+            <p>Meet local owners and executives over breakfast at the Chamber offices on Av. Universidad.</p>
+          </article>
+          <article class="event">
+            <h3>Shop Local Holiday Market</h3>
+            <p><strong>Sat, Dec 12, 2026 · 10:00 AM – 6:00 PM</strong></p>
+            <p>Member businesses showcase their products in Plaza Principal de San Nicolás.</p>
+          </article>
+          <article class="event">
+            <h3>Workshop: Digital Marketing for SMEs</h3>
+            <p><strong>Wed, Jan 20, 2027 · 6:00 PM</strong></p>
+            <p>A hands-on session on social media, SEO and online sales for small businesses.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="card weather">
+        <h2>Current Weather</h2>
+        <div class="card-body">
+          <div class="weather-now">
+            <img id="weather-icon" src="images/logo.svg" alt="" width="80" height="80" hidden>
+            <div>
+              <p class="temp" id="current-temp">--&deg;C</p>
+              <p id="weather-desc" class="status">Loading weather…</p>
+            </div>
+          </div>
+          <div class="weather-details" id="weather-details"></div>
+        </div>
+      </section>
+
+      <section class="card forecast">
+        <h2>Weather Forecast</h2>
+        <div class="card-body">
+          <ul class="forecast-list" id="forecast">
+            <li class="status">Loading forecast…</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <section class="spotlights">
+      <h2>Member Spotlights</h2>
+      <div class="spotlight-container" id="spotlight-container">
+        <p class="status">Loading spotlights…</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h2>San Nicolás Chamber of Commerce</h2>
+        <address>
+          Av. Universidad 1100, Centro<br>
+          San Nicolás de los Garza, N.L., México<br>
+          <a href="mailto:info@sanicolaschamber.example">info@sanicolaschamber.example</a><br>
+          <a href="tel:+528183000000">+52 81 8300 0000</a>
+        </address>
+      </div>
+      <div class="footer-social">
+        <h2>Follow us</h2>
+        <ul class="social">
+          <li><a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="footer-dev">
+        <p>Abraham APELLIDO</p>
+        <p>WDD 231 Class Project</p>
+        <p>&copy;<span id="currentyear"></span> San Nicolás Chamber of Commerce</p>
+        <p id="lastModified"></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/common.js" defer></script>
+  <script src="scripts/home.js" defer></script>
+</body>
+
+</html>
